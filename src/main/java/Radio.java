@@ -1,9 +1,45 @@
 public class Radio {
+    private int currentVolume;
+    private int currentStation;
 
-    public int currentVolume;
+    public void increaseVolume() {
+        if (currentVolume >= 100) {
+            return;
+        }
+        int target = currentVolume + 1;
+        currentVolume = target;
+    }
+
+    public void increaseStation() {
+        if (currentStation >= 9) {
+            return;
+        }
+        int target = currentStation + 1;
+        currentStation = target;
+    }
+
+    public void decreaseVolume() {
+        if (currentVolume <= 0) {
+            return;
+        }
+        int target = currentVolume - 1;
+        currentVolume = target;
+    }
+
+    public void decreaseStation() {
+        if (currentStation <= 0) {
+            return;
+        }
+        int target = currentStation - 1;
+        currentStation = target;
+    }
 
     public int getCurrentVolume() {
         return currentVolume;
+    }
+
+    public int getCurrentStation() {
+        return currentStation;
     }
 
     public void setCurrentVolume(int newCurrentVolume) {
@@ -16,28 +52,6 @@ public class Radio {
         currentVolume = newCurrentVolume;
     }
 
-    public void increaseVolume() {
-        if (currentVolume >= 100) {
-            return;
-        }
-        int target = currentVolume + 1;
-        currentVolume = target;
-    }
-
-    public void decreaseVolume() {
-        if (currentVolume <= 0) {
-            return;
-        }
-        int target = currentVolume - 1;
-        currentVolume = target;
-    }
-
-    public int currentStation;
-
-    public int getCurrentStation() {
-        return currentStation;
-    }
-
     public void setCurrentStation(int newCurrentStation) {
         if (newCurrentStation < 0) {
             return;
@@ -46,21 +60,5 @@ public class Radio {
             return;
         }
         currentStation = newCurrentStation;
-    }
-
-    public void increaseStation() {
-        if (currentStation >= 9) {
-            return;
-        }
-        int target = currentStation + 1;
-        currentStation = target;
-    }
-
-    public void decreaseStation() {
-        if (currentStation <= 0) {
-            return;
-        }
-        int target = currentStation - 1;
-        currentStation = target;
     }
 }

@@ -12,6 +12,8 @@ public class Radio {
 
     public void increaseStation() {
         if (currentStation >= 9) {
+            int beginning = 0;
+            currentStation = beginning;
             return;
         }
         int target = currentStation + 1;

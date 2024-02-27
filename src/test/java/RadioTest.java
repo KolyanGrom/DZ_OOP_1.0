@@ -143,10 +143,23 @@ public class RadioTest {
     public void increaseStation() {
         Radio station = new Radio();
 
-        station.setCurrentStation(9);
+        station.setCurrentStation(8);
         station.increaseStation();
 
         int expected = 9;
+        int actual = station.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void increaseMaxStation() {
+        Radio station = new Radio();
+
+        station.setCurrentStation(9);
+        station.increaseStation();
+
+        int expected = 0;
         int actual = station.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);

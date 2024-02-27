@@ -30,6 +30,8 @@ public class Radio {
 
     public void decreaseStation() {
         if (currentStation <= 0) {
+            int maxstation = 9;
+            currentStation = maxstation;
             return;
         }
         int target = currentStation - 1;

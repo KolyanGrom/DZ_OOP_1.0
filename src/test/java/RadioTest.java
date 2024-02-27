@@ -195,10 +195,10 @@ public class RadioTest {
     public void decreaseBelowMinStation() {
         Radio station = new Radio();
 
-        station.setCurrentStation(-5);
+        station.setCurrentStation(0);
         station.decreaseStation();
 
-        int expected = 0;
+        int expected = 9;
         int actual = station.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);

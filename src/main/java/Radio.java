@@ -9,6 +9,7 @@ public class Radio {
 
     public Radio(int quantityStation) {
         this.quantityStation = quantityStation;
+        this.maxStstion = quantityStation;
     }
 
 

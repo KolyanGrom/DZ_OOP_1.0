@@ -209,7 +209,14 @@ public class RadioTest {
         Radio radio = new Radio(9);
 
         Assertions.assertEquals(9, radio.getQuantityStation());
+    }
 
+    @Test
+    public void chooseStation() {
+        Radio radio = new Radio(20);
+        radio.setCurrentStation(15);
+        radio.getCurrentStation();
 
+        Assertions.assertEquals(0, radio.getCurrentStation());
     }
 }

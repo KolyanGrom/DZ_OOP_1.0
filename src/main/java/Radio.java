@@ -9,8 +9,8 @@ public class Radio {
 
     public Radio(int quantityStation) {
         this.quantityStation = quantityStation;
-
     }
+
 
     public Radio() {
 
